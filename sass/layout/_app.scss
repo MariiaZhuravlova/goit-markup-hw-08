@@ -1,0 +1,58 @@
+.application
+{
+    padding-top: 0;  
+
+}
+
+.application__title
+{
+    margin-bottom: 50px;
+   
+    @include font(700, 36px, 1.17, 0.03em);
+    text-align: center;
+}
+.application__list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+      
+}
+.application__item{
+    .application__list > &{
+        flex-basis: calc((100% / 3) - 30px);
+        }
+    
+        &:not(:last-child)
+        {
+            margin-right: $card-set-gap;
+        }
+}
+.application__thumb{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+.application__text-background {
+    position: absolute;
+    bottom: 0;
+             
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    @extend %align-items;
+    justify-content: center;
+    
+} 
+
+.application__text{
+    
+    @include font(700, 14px, 1.17, 0.03em);
+    text-transform: uppercase;
+    color: $text-color-white;
+    
+}
