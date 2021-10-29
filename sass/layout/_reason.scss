@@ -3,44 +3,30 @@
     padding: 0;
     margin: 0;
     list-style: none;
-@media screen and (min-width: $tablet) {
+    margin-bottom: -$card-set-gap;
+    @media screen and(min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
+    margin: -15px;
+    
+    }
     
             
 }
 
 .reason-list__card{
-    margin-bottom: 30px;
-    .reason-list > &
-{
-    width: 100%;
-    @media screen and (min-width: $tablet) {
-        flex-basis: calc((100% / 2) - 30px);
-        margin-left: $card-set-gap;
-        margin-top: $card-set-gap;
-        &:nth-child(2n+1)
-        {
-            margin-left: 0;
-        }
-        &:nth-child(-n+2)
-        {
-            margin-top: 0;
-        }
-        &:last-child {
-         margin-bottom: 30px;
-         }
-    }
-//    flex-basis: calc((100% / 4) - 30px);
-      
- }
-
-//     &:not(:last-child){
-//     margin-right:  $card-set-gap;
-//     }
-}
+    // width: 100%;
+    margin-bottom: $card-set-gap;
+    
+        @media screen and(min-width: $tablet) {
+            flex-basis: calc((100% / 2) - 30px);
+            margin: 15px; 
+            }
+            @media screen and(min-width: $desktop) {
+                flex-basis: calc((100% / 4) - 30px);
+                
+                }
+        }     
 .reason-list__picture{ 
     height: 120px;
 
@@ -51,6 +37,16 @@
     justify-content: center;
     
    }
+  
+ 
+.reason-list__title
+{margin-bottom: 10px;
+@include font(700, 14px, 1.14, 0.03em);
+text-transform: uppercase;
+color: $primary-text-color;
+text-align: center;
+
+}
 .reason-list__text
 {
     @include font(400, 14px, 1.71, 0.03em);
@@ -61,12 +57,3 @@
     width: 70px;
     height: 70px;
    }
-   
- 
-.reason-list__title
-{margin-bottom: 10px;
-text-align: center;
-@include font(700, 14px, 1.14, 0.03em);
-text-transform: uppercase;
-color: $primary-text-color;
-}

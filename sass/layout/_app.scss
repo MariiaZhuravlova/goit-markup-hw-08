@@ -1,5 +1,8 @@
 .application
-{
+{ 
+    @media screen and(max-width: 1599px) {
+        display: none;    
+}
     padding-top: 0;  
 
 }
@@ -17,12 +20,16 @@
     list-style: none;
 
     display: flex;
-      
+    margin: -15px;  
 }
 .application__item{
-    .application__list > &{
+    
         flex-basis: calc((100% / 3) - 30px);
-        }
+       
+   
+    // .application__list > &{
+    //     flex-basis: calc((100% / 3) - 30px);
+    //     }
     
         &:not(:last-child)
         {
