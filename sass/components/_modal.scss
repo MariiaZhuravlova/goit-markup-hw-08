@@ -1,8 +1,8 @@
 .modal{
     position: relative;
-    
-    min-height: 581px;
-    min-width: 528px;
+    width: 450px;
+    height: 609px;
+   
     padding: 40px;
 
     background-color: #FFFFFF;
@@ -11,8 +11,12 @@
 
    transform: scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-       
    
+    @media screen and(min-width: $desktop) {
+        
+    min-height: 581px;
+    min-width: 528px;
+}
 }
 
 .close-modal{
@@ -61,11 +65,15 @@ textarea{
     color: $title-text-color;
 }
 .label-check{
+    @include font(400, 12px, 1.17, 0.03em);
 
-@include font(400, 14px, 1.71, 0.03em);
 color: $title-text-color;
 @extend %align-items;
 justify-content: center;
+
+@media screen and(min-width: $desktop) {
+    @include font(400, 14px, 1.71, 0.03em);
+}
 
  span{
     
@@ -92,9 +100,6 @@ justify-content: center;
  }
 
 }
-
-   
-
 .link-order{
     color: $accent-text-color;
     text-decoration: underline;
@@ -158,5 +163,5 @@ margin-bottom: 10px;
 
 .comment{
     padding: 12px;
-    
+    height: 120px;
 }

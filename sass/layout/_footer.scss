@@ -1,39 +1,96 @@
 .footer
 {   padding-top: 60px;
     padding-bottom: 60px;
-
+    height: 603px;
     background-color: $hero-footer-color;
+    @media screen and(min-width: $tablet) {
+        height: 463px;
+    }
+    @media screen and(min-width: $desktop) 
+    {
+        height: 252px;
+    }
 }
 
-.footer-container{
+.footer-list
+{ 
+    
+    margin-bottom: -60px;
+    @media screen and(min-width: $tablet) {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        // margin-right: -165px;
    
-    // display: flex;
-    // align-items: baseline;
+    }
+    @media screen and(min-width: $desktop) 
+    {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+.footer-items{
+    // &:not(:last-child){
+                margin-bottom: 60px;
+            // }
+    // width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     
+    @media screen and(min-width: $tablet) {
+        
+        flex-basis: calc((100% / 2)-165px);
+        &:nth-child(1){
+        margin-right: 165px;}
+          
+    }
+
+    @media screen and(min-width: $desktop) 
+    {
+        margin-bottom: 0;
+        margin-right: 0;
+        
+        &:nth-child(1){
+            margin-right: 70px;}
+        
+   }
 }
 .footer-contact{
-    display: flex;
-    flex-direction: column;
-    // margin-right: 70px;
+    text-align: center;
+    @media screen and(min-width: $desktop) {
+        text-align:left;
+    }
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+   
+    // }
+}
+.logo-text__footer{
+    
+}
+.logo-text__footer--white
+{ 
+   color: $logo-text-white;
 }
 .address-list{
     padding: 0;
     margin: 0;
-    margin-top: 20px;
     list-style: none;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 20px;
+       
+    
 }
 .address-list__item{
-    // &:not(:last-child)
-    // {
-    // margin-bottom: 9px;
-    // }
+    
+    &:not(:last-child)
+    {
+    margin-bottom: 8px;
+    }
+    
+  
+    
 }
 .address-list__link
 { 
@@ -52,39 +109,41 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color:$text-color-white;
 }
 .footer-social{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    text-align: center;
+    @media screen and(min-width: $desktop) {
+        text-align:left;
+    }
+    }
 .footer-container__title{
     
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: $logo-text-white;
     margin-bottom: 20px;
-    
+
+          
     }
     
        
     .label-send{
-        // display: inline-block;
-
+        display: inline-block;
+        
     }
 .footer-send{
-    display: flex;
-    // margin-left: auto;
+   
 input:focus{
 outline: none;
 border: 1px solid $accent-text-color;
 }
+@media screen and(min-width: $desktop) {
+    display: flex;
+     margin-left: auto;
+    }
 }
     
     .footer-send-field{
-        
-        // display: flex;
-        // justify-content: baseline;
-       
-            input
+    
+          input
         {
             margin: 0;
             padding: 15px 16px;
@@ -95,31 +154,52 @@ border: 1px solid $accent-text-color;
             @include font(400, 16px, 1.25, 0.03em);
             color: $text-color-white;
             background-color:transparent;
+            height: 50px;
+            width: 450px;
+            @media screen and(min-width: $desktop) {
             width: 358px;
+           }
             transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
            
             &::placeholder{
                 color: rgba(255, 255, 255, 0.6);
             }
         }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+         @media screen and(min-width: $desktop) {
+            flex-direction: row;
+            align-items:baseline;
+        }   
+       
     }
-        
+    .online-form{
+    text-align: center; 
+    @media screen and(min-width: $desktop) {
+        text-align:left;
+    }
+    }   
         
             
     .button-send{
-            
-        // margin-left: 12px;
-        // @extend %align-items;
-        // justify-content: center;
         
-        
+        margin-top: 20px;
+        @extend %align-items;
+        justify-content: center;
+               
         &:hover,
         &:focus
         {
             background-color: #188CE8;
         
         }
-       
+        @media screen and(min-width: $desktop) {
+
+            margin-top: 0; 
+            margin-left: 12px;
+        }
     }
     
 .button-send__icon
