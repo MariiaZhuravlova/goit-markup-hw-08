@@ -210,6 +210,11 @@ justify-content: space-between;
     display: flex;
     justify-content: space-between;
 
+    @media screen and(max-width: $mobile) {
+        font-size: 30px;
+        padding: 20px;
+    }
+
   }
  .mob-menu-nav__link {
 font-weight: 500;
@@ -238,6 +243,9 @@ color: $primary-text-color;
     color: $accent-text-color;
     display: block;
     margin-bottom: 32px;
+    @media screen and(max-width: $mobile) {
+        font-size: 30px;
+    }
 }
 
 .mob-menu__mail{
@@ -262,7 +270,9 @@ margin-bottom: 64px;
     color: $accent-text-color;
      display: flex;
      align-items: center;
-    
+     @media screen and(max-width: $mobile) {
+        font-size: 14px;
+         }
            
     }
 .pre-title{

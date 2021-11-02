@@ -71,6 +71,9 @@ color: $title-text-color;
 @extend %align-items;
 justify-content: center;
 
+@media screen and(max-width: $mobile) {
+    @include font(400, 10px, 1.17, 0.03em);
+}
 @media screen and(min-width: $desktop) {
     @include font(400, 14px, 1.71, 0.03em);
 }
@@ -104,6 +107,13 @@ justify-content: center;
     color: $accent-text-color;
     text-decoration: underline;
     display: inline;
+    @media screen and(max-width: $mobile) {
+        display: contents;
+    }
+    @media screen and(min-width: $mobile) {
+        display: inline;
+        
+    }
     }
 
 .form-field{

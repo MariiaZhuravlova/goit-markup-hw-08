@@ -156,6 +156,9 @@ border: 1px solid $accent-text-color;
             background-color:transparent;
             height: 50px;
             width: 450px;
+            @media screen and(max-width: $mobile) {
+                width: 300px;  
+            }
             @media screen and(min-width: $desktop) {
             width: 358px;
            }
