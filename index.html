@@ -24,23 +24,25 @@
         <nav class="header-navigation">
             <a href="./index.html" class="logo-text link">Web<span class="logo-text__studio">Studio
                 </span></a>
-
-             <button type="button" 
-             class="button-menu js-open-menu" 
-             aria-expanded="false" 
-             aria-controls="mobile-menu"
-             > 
-                 <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                     <use class="icon-menu" href="./images/icons.svg#icon-menu-mob"></use>
-                     <!-- <use class="icon-cross" href="./images/icons.svg#icon-close-mob"></use> -->
-                 </svg>
-             </button>  
+                
+                <button type="button" 
+                class="button-menu js-open-menu"
+                aria-expanded="false" 
+                aria-controls="mob-menu">  
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./images/icons.svg#icon-menu-mob"></use>
+                        
+                    </svg>
+                </button>  
+             
             
             <ul class="site-nav list">
                 <li class="site-nav__item"><a href="./index.html" class="site-nav__link current link">Студия</a></li>
                 <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
                 <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
             </ul>
+
+
         </nav>
              <ul class="contact-list list">
             <li class="contact-list__item"><a class="contact-list__link link" href="mailto:info@devstudio.com" >
@@ -54,30 +56,59 @@
                   </svg>
                   +38 096 111 11 11</a></li>
         </ul>
-    </div>
-        
-        <div class="menu-container js-menu-container" id="mobile-menu"> 
-            <button type="button" class="button-menu js-close-menu">
-               <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                   <use class="icon-cross" href="./images/icons.svg#icon-close-mob"></use>
-               </svg>
-            </button>
-            <ul class="mobile-menu list">
-
-                <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link current link">Студия</a></li>
-                <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link">Портфолио</a></li>
-                <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Контакты</a></li>
-           
-                <li class="mobile-menu__item"><a href="tel:+380961111111" class="mobile-menu__link current link">+38 096 111 11 11</a></li>
-                <li class="mobile-menu__item"><a href="mailto:info@devstudio.com" class="mobile-menu__link mobile-menu__link--size link">info@devstudio.com</a></li>   
-                               
-              </ul>
-        </div>
      </div>
+     <!-- <div class="backdrop is-hidden"> -->
+            <div class="mob-menu js-menu-container" id="mob-menu">
+                <div class="mob-menu__content">
+                    
+                <ul class="mob-menu-nav__list list">
+                    <li class="mob-menu-nav__item">
+                        <a class="mob-menu-nav__link link current-page" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mob-menu-nav__item">
+                        <a class="mob-menu-nav__link link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mob-menu-nav__item">
+                        <a class="mob-menu-nav__link link" href="">Контакты</a>
+                    </li>
+                </ul>
+                <div class="mob-menu-bottom">
+                  <a class="mob-menu__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+               
+                  <a class="mob-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+               
+                                  
+                <ul class="mob-menu-social__list list">
+                    <li class="mob-menu-social__item">
+                      <a class="mob-menu-social__link link" href="">Instagram</a>  
+                    </li>
+                    <li class="mob-menu-social__item">
+                        <a class="mob-menu-social__link link pre-title" href=""> Twitter</a>  
+                    </li>
+                    <li class="mob-menu-social__item">
+                        <a class="mob-menu-social__link link pre-title" href="">Facebook</a>  
+                    </li>
+                    <li class="mob-menu-social__item">
+                        <a class="mob-menu-social__link link pre-title" href="">LinkedIn</a>  
+                    </li>
+                </ul>
+            </div>
+            
+                    <button type="button" class="button-menu js-close-menu">
+                        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                            <use class="icon-cross" href="./images/icons.svg#icon-close-mob"></use>
+                        </svg>
+                        </button>
+            <!-- </div> -->
+        
+     </div>
+                
+        
     </header>
 
     <main>
         <section class="hero">
+            
         <div class="container hero-container">
             <div class="hero-content">
             <h1 class="hero-content__title">Эффективные решения<br> для вашего бизнеса</h1>
@@ -561,12 +592,12 @@
         </form>
     </div>
     </div>
-    <script
+    <!-- <script
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
     crossorigin="anonymous"
-  ></script>
+  ></script> -->
     <script src="./js/modal.js"></script>
     <script defer src="./js/mobile-menu.js"></script>
 </body>
