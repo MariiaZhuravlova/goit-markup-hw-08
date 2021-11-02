@@ -45,6 +45,10 @@
 text-transform: uppercase;
 color: $primary-text-color;
 text-align: center;
+@media screen and(min-width: $tablet) {
+    text-align: left;
+    
+}
 
 }
 .reason-list__text
